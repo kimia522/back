@@ -1,0 +1,17 @@
+stages:
+  - build
+
+build_backend:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay2
+  before_script:
+    - echo "$DOCKERHUB_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+  script:
+    - docker build -t kimia75/kimia-backend:latest .
+    - docker push kimia75/kimia-backend:latest
+  only:
+    - backend

@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/FootprintDB
+    username: postgres
+    password: password
+  application:
+    name: FootprintDB
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
