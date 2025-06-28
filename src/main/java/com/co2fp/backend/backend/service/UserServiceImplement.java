@@ -87,7 +87,7 @@ public class UserServiceImplement implements UserService{
             if(passwordEncoder.matches(user.getPassword(),User.getPassword())){
                 String token = jwtUtil.generateToken(user.getUsername());
                 String lastname = User.getLastname();
-                Long id = User.getUser_id();
+                Long id = User.getUserId();
                 Boolean admin = User.getAdmin();
 
                 return new HashMap<>() {{
@@ -207,7 +207,7 @@ public class UserServiceImplement implements UserService{
     private UserResponseDTO convertToUserResponseDTO(UserEntity userEntity) {
 
         return UserResponseDTO.builder()
-                .user_id(userEntity.getUser_id())
+                .user_id(userEntity.getUserId())
                 .email(userEntity.getEmail())
                 .firstname(userEntity.getFirstname())
                 .lastname(userEntity.getLastname())

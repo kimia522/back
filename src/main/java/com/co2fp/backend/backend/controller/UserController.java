@@ -54,7 +54,7 @@ public class UserController {
         try {
             UserEntity registeredUser = userService.addUser(User);
             Map<String, Object> response = new HashMap<>();
-            response.put("userId", registeredUser.getUser_id());
+            response.put("userId", registeredUser.getUserId());
             response.put("message", "User registered successfully");
             return ResponseEntity.ok().body(response); //
         } catch (RuntimeException e) {

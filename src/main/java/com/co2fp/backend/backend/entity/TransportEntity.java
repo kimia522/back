@@ -22,9 +22,9 @@ public class TransportEntity {
     @Column(name="TransportName")
     private String transport_name;
     @Column(name="Fuel_Factor")
-    private Integer fuel_factor;
+    private Float fuel_factor;
     @Column(name="Emission_Factor")
-    private Integer emission_factor;
+    private Float emission_factor;
     @OneToMany(mappedBy = "transport", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AnswerEntity> answer;
 }

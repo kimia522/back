@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class TransportResponseDTO {
     private Long transport_id;
     private String transport_name;
-    private Integer fuel_factor;
-    private Integer emission_factor;
+    private Float fuel_factor;
+    private Float emission_factor;
 
 }

@@ -28,6 +28,8 @@ public class AnswerEntity {
     private Long  distance;
     @Column(name="Passenger_Count")
     private Long  passenger_count;
+    @Column(name = "Co2_Emmission")
+    private Float co2_emmission;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="AnswerByTransport",referencedColumnName = "Transport_Id",nullable = true)
     private TransportEntity transport;

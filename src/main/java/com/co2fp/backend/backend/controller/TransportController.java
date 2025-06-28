@@ -34,8 +34,9 @@ public class TransportController {
             return new ResponseEntity<>(transportResponseDTOList,HttpStatus.OK);
         }
     }
+//    @CrossOrigin(origins = "*")
     @PostMapping("/create")
-    public ResponseEntity<Map<String, String>> createAnswer(@RequestBody TransportRegisterDTO transportRegisterDTO) {
+    public ResponseEntity<Map<String, String>> createTransport(@RequestBody TransportRegisterDTO transportRegisterDTO) {
         Map<String, String> response = transportService.setMethod(transportRegisterDTO);
 
         if (response.containsKey("error")) {

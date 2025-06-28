@@ -18,6 +18,7 @@ public class AnswerResponseDTO {
     private LocalTime time;
     private Long  distance;
     private Long  passenger_count;
+    private Float co2_emmission;
     private String transport_name;
     private Long transport_id;
     private String username;
